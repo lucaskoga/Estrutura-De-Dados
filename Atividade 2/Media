@@ -3,19 +3,19 @@ public class Principal {
     public  int soma (int a, int b, int c){
         return a+b+c;
     }
-    public int divisao (int a,int b){
-        return a/b;
+    public int divisao (int a){
+        return a/3;
     }
     public static void main(String[] args) {
 
         int v1 = 70;
-        int v2 = 75;
-        int v3 = 80;
-        int s = 3;
+        int v2 = 80;
+        int v3 = 75;
+
 
        Principal prin = new Principal();
        int f = prin.soma(v1,v2,v3);
-       int t = prin.divisao(f,s);
+       int t = prin.divisao(f);
 
         System.out.println("v1:"+v1+""+" v2:"+v2+" v3:"+v3+" Media:"+t);
     }
