@@ -2,14 +2,14 @@ public class Principal {
 
     public static void main(String[] args) {
 
-        // Foi Criado os vetores G e R de 13 possicoes;
+        /* Foi Criado os vetores G, G1 e R de 13 possicoes;
+        * G corresponde a coluna 1  e G1 corresponde a clouna 2 de vetores*/
         int intVetG[] = new int[13];
         int intVetG1[] = new int[13];
         int intVetR[] = new int[13];
-        int somaResultado = 0;
 
         // E também um ponteiro para ajudar a fazer a contagem de quantos acerto o apostador teve;
-        int pontNumeroAcerto = -1;
+        int pontNumeroAcerto = 0;
 
         //  Inserindo todos os valores no vetor Resultado G
         intVetG[0] = 1;
@@ -64,15 +64,14 @@ public class Principal {
         }
 
         /* Esse for vai ser responsavel por fazer a verificacão se o vetor G possui resultados igual ao vetor de R*/
-        if (pontNumeroAcerto == -1){
-            pontNumeroAcerto = 0;
-            for (int i = 0; i < 13; i++){
-               if (intVetG[i] == intVetR[i]){
-                   pontNumeroAcerto++;
-               }
+
+        for (int i = 0; i < 13; i++){
+            if (intVetG[i] == intVetR[i]){
+                pontNumeroAcerto++;
             }
         }
-        
+
+
         /* Esse for vai ser responsavel por fazer a verificacão se o vetor G1 possui resultados igual ao vetor de R*/
         for (int i = 0; i < 13; i++){
             if (intVetG1[i] == intVetR[i]){
