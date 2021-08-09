@@ -1,7 +1,7 @@
 public class Principal {
-    
+
     public static void main(String[] args) {
-        
+
         // Foi Criado os vetores G e R de 13 possicoes;
         int intVetG[] = new int[13];
         int intVetG1[] = new int[13];
@@ -10,7 +10,6 @@ public class Principal {
 
         // E também um ponteiro para ajudar a fazer a contagem de quantos acerto o apostador teve;
         int pontNumeroAcerto = -1;
-        int pontNumeroAcerto1 = -1;
 
         //  Inserindo todos os valores no vetor Resultado G
         intVetG[0] = 1;
@@ -64,9 +63,7 @@ public class Principal {
             System.out.println(intVetR[i]);
         }
 
-        /* Aqui e o responsavel por percorre todo o vetor e ver se um vetor e igual ao outro, e também e responsavel
-        por ver o total de numero igual ao vetor ganhador. */
-
+        /* Esse for vai ser responsavel por fazer a verificacão se o vetor G possui resultados igual ao vetor de R*/
         if (pontNumeroAcerto == -1){
             pontNumeroAcerto = 0;
             for (int i = 0; i < 13; i++){
@@ -75,16 +72,16 @@ public class Principal {
                }
             }
         }
-
-        pontNumeroAcerto1 = pontNumeroAcerto;
+        
+        /* Esse for vai ser responsavel por fazer a verificacão se o vetor G1 possui resultados igual ao vetor de R*/
         for (int i = 0; i < 13; i++){
             if (intVetG1[i] == intVetR[i]){
-                pontNumeroAcerto1++;
+                pontNumeroAcerto++;
             }
         }
-            System.out.println("O numero de acerto do Apostador é de: "+pontNumeroAcerto1 +" pontos");
+            System.out.println("O numero de acerto do Apostador é de: "+pontNumeroAcerto +" pontos");
 
-        if (pontNumeroAcerto1  >= 13){
+        if (pontNumeroAcerto  >= 13){
             System.out.println("O apostadou GANHOU!!! Parabens ");
         }
         else
