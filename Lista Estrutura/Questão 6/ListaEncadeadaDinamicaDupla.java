@@ -35,43 +35,4 @@ public class ListaEncadeadaDinamicaDupla {
         }
     }
 
-    public No remove(String texto){
-        No rem = inicio;
-
-        while (rem!=null){
-            if (rem.toString().contains(texto)){
-                if (rem.getAnterior()!=null){
-
-                    No anterior = rem.getAnterior();
-
-                    anterior.setProximo(rem.getProximo());
-
-                    if (rem.getProximo()!=null) {
-                        No proximo = rem.getProximo();
-                        proximo.setAnterior(rem.getAnterior());
-                    }
-                    if (rem == fim){
-                        fim = anterior;
-                    }
-                    rem.setProximo(null);
-                    System.out.println("Aluno Removida: "+rem.toString());
-                    return rem;
-                }
-                else{
-                    inicio.setAnterior(null);
-                    if (fim == rem){
-                        fim = rem.getProximo();
-                    }
-                    rem.setProximo(null);
-                    System.out.println("Aluno Removida: "+rem.toString());
-                    return rem;
-                }
-            }
-            rem = rem.getProximo();
-        }
-        System.out.println("Aluno não encontradana lista !!!! ");
-        return null;
-    }
-
-
 }
