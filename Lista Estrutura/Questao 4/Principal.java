@@ -24,12 +24,13 @@ public class Principal {
             System.out.println("3 - Remover Atleta da Lista");
             System.out.println("4 - Buscar Por Atleta na Lista");
             System.out.println("Qual opicao Voce Escolhe: ");
-            
+
             //Entrada para selecionar o menu
             opicao = leitor.nextInt();
             leitor.nextLine();
 
             switch (opicao) {
+                //case 1 para inserir e registar os Atleta
                 case 1:{
                     System.out.print("===Informe os Dados Para Registrar===\n");
                     System.out.println("Nome: ");
@@ -48,10 +49,12 @@ public class Principal {
                     lista.inserirAtleta(new No(atleta));
                     break;
                 }
+                //Case 2 para imprimir a Lista
                 case 2: {
                     lista.imprimeListaDeAtleta();
                     break;
                 }
+                //Case 3 para Receber o nome de alguem da lista e remover
                 case 3:{
                     String remover;
                     System.out.println("Qual o Atleta que deseja Remover: ");
@@ -59,6 +62,7 @@ public class Principal {
                     lista.removeAtleta(remover);
                     break;
                 }
+                //Case 4 para Receber o nome de alguem da lista e procurar dentro da lista
                 case 4: {
                     String buscar;
                     System.out.println("Qual o nome do Atleta que deseja Buscar: ");
